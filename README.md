@@ -5,7 +5,7 @@ An interactive mass-spring-damper simulator with an optional PID controller, bui
 ## Features
 
 - Mass-spring-damper model: `m·x'' + c·x' + k·x = F`
-- Optional PID controller (Kp, Ki, Kd) with setpoint support
+- Optional PID controller (Kp, Ki, Kd)
 - RK4 time integration
 - Live plots: position and velocity vs time, phase portrait, RK4 error vs exact solution, and formula-vs-scan fast-zeta comparison
 - Two settling-time markers: a fixed 0.1% band and an adjustable "band 2"
@@ -16,7 +16,7 @@ An interactive mass-spring-damper simulator with an optional PID controller, bui
 
 - Python 3.9+
 - NumPy
-- Matplotlib (with an interactive backend, e.g. TkAgg or Qt)
+- Matplotlib
 
 ## Installation
 
