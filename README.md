@@ -31,44 +31,7 @@ pip install -r requirements.txt
 ## Usage
 
 ```bash
-python spring_pid_simulation.py
+python3 spring_pid_simulation.py
 ```
 
-### Controls
 
-| Control | Description |
-| --- | --- |
-| Sliders | Mass, stiffness, damping, initial position/velocity, RK4 step, band 2, Kp, Ki, Kd |
-| `Crit` buttons | Snap the variable so the damping ratio ζ = 1 |
-| `ζ=…` buttons | Snap the variable to the fastest ζ for the band 2 threshold |
-| enable PID | Toggle the PID controller |
-| Reset | Restore all defaults |
-| t_end | Toggle the simulation length between 15 s and 5 s |
-
-Button colours: **red** means the target is outside the slider range, **khaki** means the fast ζ came from the scan (approximate).
-
-## Documentation
-
-All notes on variables, formulas, the fast-zeta method, validation graphs and known limitations are in the large docstring at the top of [`spring_pid_simulation.py`](spring_pid_simulation.py).
-
-Key limitations to be aware of:
-
-- Ki is only first-order accurate in the simulation (it is not an RK4 state).
-- RK4 can blow up when `|λ_max|·dt` is too large (e.g. `m=1, c=15, Kd=20, dt=0.1`).
-- The PID is ideal: no saturation, delay, noise or anti-windup.
-- One degree of freedom, linear viscous friction only, no gravity.
-
-## Project structure
-
-```
-spring_sim/
-├── spring_pid_simulation.py
-├── requirements.txt
-├── README.md
-├── LICENSE
-└── .gitignore
-```
-
-## License
-
-Released under the [MIT License](LICENSE). Replace the placeholder name in `LICENSE` with your own.
