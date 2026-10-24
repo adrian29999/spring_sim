@@ -349,7 +349,7 @@ chk = CheckButtons(ax_chk, ['enable PID'], [p['pid_on']])
 ax_reset = fig.add_axes((0.20, y, 0.12, 0.05))
 btn_reset = Button(ax_reset, 'Reset')
 
-ax_tend = fig.add_axes((0.335, y, 0.11, 0.05))
+ax_tend = fig.add_axes((0.35, y, 0.11, 0.05))
 btn_tend = Button(ax_tend, f't_end: {t_end}', color=b_nthn, hovercolor=b_hover)
 
 y -= 0.05
