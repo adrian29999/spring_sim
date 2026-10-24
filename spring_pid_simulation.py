@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider, CheckButtons, Button
 
 
+
 SETTLE_FRAC = 1e-3   # fixed settling band, fraction of travel distance (0.1%)
 
 p: dict[str, Any] = dict(m=1.0, k=10.0, c=0, x0=1.0, v0=0.0, dt=0.001, err_pct=5.0,
@@ -346,10 +347,10 @@ for snap_key in SNAP_KEYS:
 ax_chk = fig.add_axes((0.05, y, 0.12, 0.05))
 chk = CheckButtons(ax_chk, ['enable PID'], [p['pid_on']])
 
-ax_reset = fig.add_axes((0.20, y, 0.12, 0.05))
+ax_reset = fig.add_axes((0.19, y, 0.12, 0.05))
 btn_reset = Button(ax_reset, 'Reset')
 
-ax_tend = fig.add_axes((0.35, y, 0.11, 0.05))
+ax_tend = fig.add_axes((0.33, y, 0.12, 0.05))
 btn_tend = Button(ax_tend, f't_end: {t_end}', color=b_nthn, hovercolor=b_hover)
 
 y -= 0.05
@@ -659,5 +660,3 @@ chk.on_clicked(on_check)
 
 redraw()
 plt.show()
-
-
